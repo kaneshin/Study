@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Study01/Study01.xcodeproj">
+      location = "group:Algorithm#01/Algorithm#01.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DataStructure/DataStructure.xcodeproj">
+      location = "group:Algorithm#02/Algorithm#02.xcodeproj">
    </FileRef>
 </Workspace>

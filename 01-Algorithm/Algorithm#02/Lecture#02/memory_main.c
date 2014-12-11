@@ -1,4 +1,4 @@
-// node.swift
+// memory_main.c
 //
 // Copyright (c) 2014 Shintaro Kaneko
 //
@@ -20,10 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-typealias NodePointer = AutoreleasingUnsafeMutablePointer<Node?>
+#include "common.h"
 
-class Node {
-    var next: NodePointer?
+struct person_tag {
+    char *nickname;
+    int age;
+};
+typedef struct person_tag person_t;
 
-
+int main(int argc, const char * argv[]) {
+    person_t *person_ptr = malloc(sizeof(person_t));
+    person_ptr->nickname = "kaneshin";
+    person_ptr->age = 26;
+    printf("%s is %d years old.\n",
+           person_ptr->nickname, person_ptr->age);
+    free(person_ptr);
+    return 0;
 }
